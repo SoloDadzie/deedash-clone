@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Ride | DeeDash Cabs</title>
+    <meta
+      name="description"
+      content="Book a DeeDash ride in Chester for ASAP pickups, scheduled trips, and airport transfers with instant confirmation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a href="./index.html" class="brand" aria-label="DeeDash Cabs home">
+          <img src="./assets/images/logo-primary.png" alt="DeeDash Cabs" />
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+          <a href="./book-a-ride.html" aria-current="page">Book a Ride</a>
+          <a href="./our-services.html">Our Services</a>
+          <a href="./business-solutions.html">Business Solutions</a>
+          <a href="./driver-portal.html">Driver Portal</a>
+        </nav>
+
+        <a class="btn btn-primary nav-cta" href="tel:%5BPHONE%20NUMBER%5D">Call: [PHONE NUMBER]</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-content reveal">
+          <p class="eyebrow">Booking Made Simple</p>
+          <h1>BOOK A RIDE IN CHESTER &mdash; FAST AND SIMPLE</h1>
+          <p>Request an ASAP pickup or schedule ahead. You&apos;ll get instant confirmation on screen, plus SMS/email.</p>
+          <div class="page-hero-cta">
+            <a class="btn btn-accent" href="#booking-form">Request a Ride</a>
+            <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <article class="panel reveal">
+            <p class="kicker">Booking Options</p>
+            <h2>CHOOSE WHAT WORKS FOR YOU</h2>
+            <ul class="feature-list">
+              <li>ASAP pickup for quick trips</li>
+              <li>Pre-book / schedule for planned journeys</li>
+              <li>Airport transfers for stress-free travel</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal">
+            <p class="kicker">Pricing</p>
+            <h2>FARES THAT STAY CLEAR</h2>
+            <p>
+              Fares are based on time and distance (meter-style). If you&apos;d like a rough estimate before you travel, call us,
+              and we&apos;ll help.
+            </p>
+            <a class="btn btn-primary" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="booking-form" class="section-sm">
+        <div class="container">
+          <article class="panel reveal">
+            <p class="kicker">Booking Form</p>
+            <h2>REQUEST A RIDE</h2>
+            <form class="booking-form-wide" action="#" method="post" novalidate>
+              <label>
+                Pickup location
+                <input type="text" name="pickup" placeholder="Start typing your address" />
+              </label>
+              <label>
+                Drop-off location
+                <input type="text" name="dropoff" placeholder="Where are you going?" />
+              </label>
+              <label>
+                Date &amp; time
+                <input type="text" name="time" placeholder="Choose &quot;Now&quot; for ASAP pickup" />
+              </label>
+              <label>
+                Passengers
+                <input type="text" name="passengers" placeholder="Suitable for solo travellers to small groups" />
+              </label>
+              <label>
+                Luggage
+                <input type="text" name="luggage" placeholder="Optional &mdash; helps us send the best vehicle" />
+              </label>
+              <label>
+                Payment method
+                <select name="payment">
+                  <option>Cash</option>
+                  <option>Card in car</option>
+                </select>
+              </label>
+              <label class="span-2">
+                Notes for driver
+                <textarea name="notes" placeholder="Optional &mdash; e.g., ring the side doorbell"></textarea>
+              </label>
+              <label>
+                Your name
+                <input type="text" name="name" placeholder="Full name" />
+              </label>
+              <label>
+                Mobile number
+                <input type="tel" name="mobile" placeholder="For updates and confirmation" />
+              </label>
+              <label class="span-2">
+                Email address
+                <input type="email" name="email" placeholder="For confirmation and receipt" />
+              </label>
+              <button class="btn btn-primary span-2" type="submit">Request a Ride</button>
+            </form>
+            <p class="microcopy">Instant confirmation on screen + SMS/email confirmation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-sm">
+        <div class="container">
+          <article class="panel reveal cta-band">
+            <p class="kicker">Airport Transfers</p>
+            <h2>AIRPORT TRANSFERS MADE EASY</h2>
+            <p>Pre-book your airport journey for a smooth, on-time pickup. We regularly travel to:</p>
+            <ul class="feature-list">
+              <li>Manchester Airport (MAN)</li>
+              <li>Liverpool John Lennon (LPL)</li>
+              <li>Birmingham (BHX)</li>
+              <li>London airports (long-distance)</li>
+            </ul>
+            <p class="microcopy">Flight tracking / meet-and-greet: coming soon.</p>
+            <a class="btn btn-accent" href="#booking-form">Request a Ride</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <img class="footer-logo" src="./assets/images/logo-primary.png" alt="DeeDash Cabs logo" />
+          <p>DeeDash Cabs &mdash; Chester, UK</p>
+          <p>Safe &bull; Professional &bull; Friendly &bull; 24/7</p>
+        </section>
+
+        <section>
+          <h3>Quick Links</h3>
+          <a href="./index.html">Home</a>
+          <a href="./book-a-ride.html">Book a Ride</a>
+          <a href="./our-services.html">Our Services</a>
+          <a href="./business-solutions.html">Business Solutions</a>
+          <a href="./driver-portal.html">Driver Portal</a>
+          <a href="./about-us.html">About Us</a>
+          <a href="./contact-us.html">Contact Us</a>
+        </section>
+
+        <section>
+          <h3>Contact &amp; Legal</h3>
+          <p>Phone: [PHONE NUMBER]</p>
+          <p>Email: [EMAIL ADDRESS]</p>
+          <p>WhatsApp: [WHATSAPP NUMBER]</p>
+          <p>Office: [OFFICE/BASE ADDRESS, CHESTER]</p>
+          <div class="legal-links">
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
