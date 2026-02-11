@@ -106,6 +106,11 @@ a {
   color: var(--brand-ink);
 }
 
+.primary-nav a[aria-current="page"] {
+  background: var(--brand-ink);
+  color: var(--brand-white);
+}
+
 .nav-cta {
   white-space: nowrap;
 }
@@ -336,12 +341,225 @@ a {
   padding: clamp(3.6rem, 7vw, 6rem) 0;
 }
 
+.section-sm {
+  padding: clamp(2.8rem, 5vw, 4.4rem) 0;
+}
+
 .section-title {
   margin: 0 0 2rem;
   font-family: "Caravel", "Montserrat", sans-serif;
   text-transform: uppercase;
   line-height: 1.02;
   font-size: clamp(1.9rem, 4vw, 3rem);
+}
+
+.section-intro {
+  margin: -1rem 0 2rem;
+  max-width: 70ch;
+  color: var(--text-muted);
+}
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(110deg, rgba(34, 31, 32, 0.9), rgba(34, 31, 32, 0.78)),
+    url("./assets/images/hero-chester-eastgate.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--brand-white);
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 84% 20%, rgba(251, 179, 22, 0.3), transparent 50%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(4rem, 8vw, 6.2rem) 0 clamp(3.2rem, 6vw, 4.8rem);
+}
+
+.page-hero h1 {
+  margin: 0.9rem 0 0;
+  max-width: 15ch;
+  font-family: "Caravel", "Montserrat", sans-serif;
+  text-transform: uppercase;
+  line-height: 0.99;
+  font-size: clamp(2rem, 5.6vw, 4rem);
+}
+
+.page-hero p {
+  margin: 1rem 0 0;
+  max-width: 65ch;
+  color: #ffe8b4;
+  font-family: "Drupadi", "Montserrat", sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.26rem);
+}
+
+.page-hero-cta {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.panel {
+  background: var(--brand-white);
+  border: 1px solid rgba(34, 31, 32, 0.09);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.1rem, 2vw, 1.7rem);
+}
+
+.panel + .panel {
+  margin-top: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature-list,
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.feature-list li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+}
+
+.feature-list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+  background: var(--brand-gold);
+  flex: 0 0 auto;
+}
+
+.plain-list li + li {
+  padding-top: 0.55rem;
+  border-top: 1px dashed rgba(34, 31, 32, 0.15);
+}
+
+.kicker {
+  margin: 0 0 0.45rem;
+  display: inline-block;
+  font-family: "Drupadi", "Montserrat", sans-serif;
+  letter-spacing: 0.01em;
+  color: var(--brand-gold-strong);
+}
+
+.panel h2,
+.panel h3 {
+  margin: 0 0 0.55rem;
+  font-family: "Caravel", "Montserrat", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.03;
+}
+
+.panel p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.panel .btn {
+  margin-top: 0.9rem;
+}
+
+.booking-form-wide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.booking-form-wide label {
+  display: grid;
+  gap: 0.36rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.booking-form-wide input,
+.booking-form-wide textarea,
+.booking-form-wide select {
+  border: 1px solid rgba(34, 31, 32, 0.24);
+  border-radius: 10px;
+  padding: 0.72rem 0.78rem;
+  font: inherit;
+  color: var(--brand-ink);
+  background: var(--brand-white);
+}
+
+.booking-form-wide textarea {
+  min-height: 114px;
+  resize: vertical;
+}
+
+.booking-form-wide input:focus-visible,
+.booking-form-wide textarea:focus-visible,
+.booking-form-wide select:focus-visible {
+  border-color: var(--brand-gold);
+  outline: 2px solid rgba(251, 179, 22, 0.28);
+}
+
+.span-2 {
+  grid-column: 1 / -1;
+}
+
+.microcopy {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cta-band {
+  background: var(--brand-ink);
+  color: var(--brand-white);
+  border: 1px solid rgba(34, 31, 32, 0.25);
+}
+
+.cta-band p {
+  color: #e8e8e8;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1rem;
+}
+
+.inline-actions {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .why {
@@ -638,6 +856,10 @@ a {
   .split {
     min-height: 390px;
   }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
@@ -681,6 +903,7 @@ a {
 
   .split,
   .coverage-grid,
+  .contact-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -700,11 +923,18 @@ a {
   .section-title {
     max-width: 16ch;
   }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
   .benefit-grid,
   .service-grid,
+  .booking-form-wide,
+  .grid-4,
   .booking-form {
     grid-template-columns: 1fr;
   }
