@@ -960,3 +960,38 @@ a {
     max-width: 32ch;
   }
 }
+
+.htmx-indicator {
+  display: none;
+}
+
+.htmx-request .htmx-indicator,
+.htmx-request.htmx-indicator {
+  display: block;
+}
+
+.htmx-response {
+  margin-top: 0.8rem;
+}
+
+.htmx-response-card {
+  border: 1px solid rgba(34, 31, 32, 0.15);
+  border-radius: var(--radius-md);
+  background: #fff8e7;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.htmx-response-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.htmx-response-card p {
+  margin: 0;
+  color: var(--brand-ink-soft);
+}
+
+.htmx-response-card .btn {
+  margin-top: 0.8rem;
+}
