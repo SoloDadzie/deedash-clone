@@ -19,6 +19,9 @@ Then open `http://localhost:8080`.
 - `business-solutions.html`: Business account page
 - `about-us.html`: Brand and standards page
 - `contact-us.html`: Contact and support page
+- `terms-and-conditions.html`: Legal placeholder page
+- `privacy-policy.html`: Legal placeholder page
+- `cookie-policy.html`: Legal placeholder page
 - `styles.css`: Theme, typography, responsive layout, animations
 - `main.js`: Mobile navigation toggle and reveal animations
 - `assets/images/`: Logo and image assets
