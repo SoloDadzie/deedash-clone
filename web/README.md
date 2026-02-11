@@ -1,4 +1,4 @@
-# DeeDash Cabs Landing Page (Design Proposal)
+# DeeDash Cabs Website (Design Proposal)
 
 ## Run locally
 
@@ -12,7 +12,13 @@ Then open `http://localhost:8080`.
 
 ## Files
 
-- `index.html`: Landing page structure and copy
+- `index.html`: Homepage / landing page
+- `book-a-ride.html`: Booking page
+- `our-services.html`: Service catalogue page
+- `driver-portal.html`: Driver recruitment page
+- `business-solutions.html`: Business account page
+- `about-us.html`: Brand and standards page
+- `contact-us.html`: Contact and support page
 - `styles.css`: Theme, typography, responsive layout, animations
 - `main.js`: Mobile navigation toggle and reveal animations
 - `assets/images/`: Logo and image assets
@@ -20,7 +26,7 @@ Then open `http://localhost:8080`.
 
 ## Content notes
 
-- Placeholder tokens from supplied copy are intentionally preserved:
+- Placeholder tokens from supplied copy are intentionally preserved across pages:
   - `[PHONE NUMBER]`
   - `[EMAIL ADDRESS]`
   - `[WHATSAPP NUMBER]`
