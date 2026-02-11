@@ -1,0 +1,81 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="Contact Us | DeeDash Cabs"
+  description="Contact DeeDash Cabs in Chester for bookings, support, lost property, and business travel enquiries."
+  currentPath="/contact-us"
+>
+  <section class="page-hero">
+    <div class="container page-hero-content reveal">
+      <p class="eyebrow">Contact Us</p>
+      <h1>CONTACT DEEDASH CABS</h1>
+      <p>Book a ride, ask a question, or get help &mdash; we&apos;re available 24/7.</p>
+      <div class="page-hero-cta">
+        <a class="btn btn-accent" href="/book-a-ride">Request a Ride</a>
+        <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <article class="panel reveal">
+        <p class="kicker">Bookings &amp; Support</p>
+        <h2>WE&apos;RE HERE 24/7</h2>
+        <ul class="plain-list">
+          <li><strong>Phone (24/7):</strong> [PHONE NUMBER]</li>
+          <li><strong>Email:</strong> [EMAIL ADDRESS]</li>
+          <li><strong>WhatsApp:</strong> [WHATSAPP NUMBER]</li>
+        </ul>
+        <div class="inline-actions">
+          <a class="btn btn-primary" href="/book-a-ride">Request a Ride</a>
+          <a class="btn btn-outline" href="tel:%5BPHONE%20NUMBER%5D">Call Now</a>
+        </div>
+      </article>
+
+      <article class="panel reveal">
+        <p class="kicker">Office Address</p>
+        <h2>DEEDASH CABS</h2>
+        <p>[OFFICE/BASE ADDRESS, CHESTER]</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container grid-3">
+      <article class="panel reveal">
+        <p class="kicker">Lost Property</p>
+        <h3>LEFT SOMETHING IN A VEHICLE?</h3>
+        <p>If you left something in a vehicle, contact us as soon as possible with your journey details.</p>
+        <a class="btn btn-outline" href="tel:%5BPHONE%20NUMBER%5D">Call: [PHONE NUMBER]</a>
+      </article>
+
+      <article class="panel reveal">
+        <p class="kicker">Feedback</p>
+        <h3>HELP US IMPROVE</h3>
+        <p>Your feedback helps us improve and serve Chester better.</p>
+        <a class="btn btn-outline" href="mailto:%5BEMAIL%20ADDRESS%5D">Send Feedback: [EMAIL ADDRESS]</a>
+      </article>
+
+      <article class="panel reveal cta-band">
+        <p class="kicker">Live Chat</p>
+        <h3>COMING SOON</h3>
+        <p>Live chat is coming soon.</p>
+        <button
+          class="btn btn-accent"
+          type="button"
+          hx-get="/partials/live-chat-status"
+          hx-target="#live-chat-status"
+          hx-swap="innerHTML"
+          hx-indicator="#live-chat-loading"
+        >
+          Check status
+        </button>
+        <p id="live-chat-loading" class="microcopy htmx-indicator">Checking chat rollout status...</p>
+        <div id="live-chat-status" class="htmx-response" aria-live="polite"></div>
+      </article>
+    </div>
+  </section>
+</SiteLayout>
