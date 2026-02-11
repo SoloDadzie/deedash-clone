@@ -1,19 +1,187 @@
+---
 import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout
   title="DeeDash Cabs | Chester Private Hire"
-  description="DeeDash Cabs offers safe, friendly private hire across Chester and nearby areas."
+  description="DeeDash Cabs offers safe, friendly private hire across Chester and nearby areas, from local trips to airport transfers and business travel."
   currentPath="/"
 >
-  <section class="page-hero">
-    <div class="container page-hero-content reveal">
-      <p class="eyebrow">Astro Migration</p>
-      <h1>DEEDASH SITE REBUILD IN PROGRESS</h1>
-      <p>
-        The Astro + HTMX migration has been bootstrapped. Feature branches will now add all original pages and
-        interactions.
+  <section class="hero">
+    <div class="hero-media" role="img" aria-label="Premium taxi passing Chester Eastgate Clock at dusk"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content reveal">
+      <p class="eyebrow">Private Hire in Chester &amp; Environs</p>
+      <h1>PREMIUM RIDES. GREAT VALUE. READY WHEN YOU ARE.</h1>
+      <p class="hero-subtitle">
+        DeeDash Cabs offers safe, friendly private hire across Chester &mdash; from quick local trips to airport
+        transfers and business travel.
       </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-accent" href="/book-a-ride">Request a Ride</a>
+        <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+      </div>
+
+      <p class="trust-line">24/7 service &bull; DBS-checked drivers &bull; Card or cash accepted</p>
+    </div>
+  </section>
+
+  <section class="booking-strip reveal">
+    <div class="container booking-shell">
+      <h2>BOOK IN SECONDS</h2>
+      <form
+        class="booking-form"
+        action="/book-a-ride#booking-form"
+        method="get"
+        novalidate
+        hx-get="/partials/quick-booking"
+        hx-target="#quick-booking-response"
+        hx-swap="innerHTML"
+        hx-indicator="#quick-booking-loading"
+      >
+        <label>
+          Pickup Location
+          <input type="text" name="pickup" placeholder="Start typing your address" />
+        </label>
+        <label>
+          Drop-off Location
+          <input type="text" name="dropoff" placeholder="Where are you going?" />
+        </label>
+        <label>
+          Now / Schedule
+          <input type="text" name="time" placeholder="Choose &quot;Now&quot; for ASAP pickup" />
+        </label>
+        <label>
+          Passengers
+          <input type="text" name="passengers" placeholder="Solo travellers to small groups" />
+        </label>
+        <button class="btn btn-primary" type="submit">Request a Ride</button>
+      </form>
+      <p id="quick-booking-loading" class="microcopy htmx-indicator">Checking immediate availability...</p>
+      <div id="quick-booking-response" class="htmx-response" aria-live="polite"></div>
+      <p class="booking-meta">Instant confirmation on screen, plus SMS/email.</p>
+      <p class="booking-features">
+        Book now or schedule ahead &bull; Live driver ETA &bull; Driver and vehicle details before pickup
+      </p>
+    </div>
+  </section>
+
+  <section class="section why">
+    <div class="container">
+      <h2 class="section-title reveal">WHY CHOOSE DEEDASH CABS?</h2>
+      <div class="benefit-grid">
+        <article class="benefit-card reveal">
+          <div class="icon">PF</div>
+          <h3>PROFESSIONAL &amp; FRIENDLY</h3>
+          <p>Polite drivers and a clean, comfortable ride&mdash;every time.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="icon">SF</div>
+          <h3>SAFETY FIRST</h3>
+          <p>DBS checks, ID and right-to-work checks, and trained drivers.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="icon">GV</div>
+          <h3>GREAT VALUE</h3>
+          <p>A premium experience with fair, sensible pricing.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="icon">24</div>
+          <h3>ALWAYS AVAILABLE</h3>
+          <p>24/7 bookings and support when you need it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services">
+    <div class="container">
+      <h2 class="section-title reveal">POPULAR SERVICES</h2>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <img src="/assets/images/service-airport.jpg" alt="Airport terminal for transfer service" />
+          <div class="service-copy">
+            <h3>AIRPORT TRANSFERS</h3>
+            <p>
+              Direct, stress-free trips to Manchester (MAN), Liverpool (LPL), Birmingham (BHX) and London airports.
+            </p>
+            <a href="/book-a-ride" class="btn btn-outline">Request a Ride</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <img src="/assets/images/service-school.jpg" alt="Road sign indicating school crossing" />
+          <div class="service-copy">
+            <h3>SCHOOL RUNS</h3>
+            <p>Reliable, regular transport with safeguarding-aware drivers.</p>
+            <a href="/book-a-ride" class="btn btn-outline">Request a Ride</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <img src="/assets/images/service-medical.jpg" alt="Hospital entrance for medical appointments" />
+          <div class="service-copy">
+            <h3>MEDICAL &amp; HOSPITAL TRIPS</h3>
+            <p>Non-emergency journeys to clinics and hospitals with care and professionalism.</p>
+            <a href="/book-a-ride" class="btn btn-outline">Request a Ride</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <img src="/assets/images/service-events.jpg" alt="Wedding car for special events" />
+          <div class="service-copy">
+            <h3>EVENTS &amp; WEDDINGS</h3>
+            <p>Arrive on time and travel together&mdash;perfect for evenings out and special occasions.</p>
+            <a href="/book-a-ride" class="btn btn-outline">Request a Ride</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="split split-business reveal">
+    <div class="split-media">
+      <img src="/assets/images/business-travel.jpg" alt="Business passenger with chauffeur service" />
+    </div>
+    <div class="split-copy">
+      <h2>BUSINESS TRAVEL THAT RUNS ON TIME</h2>
+      <p>
+        Need reliable travel for staff, clients, or guests? DeeDash Business Solutions offers priority support and
+        simple booking by web, phone, or email.
+      </p>
+      <a class="btn btn-accent" href="/business-solutions">Business Solutions</a>
+    </div>
+  </section>
+
+  <section class="split split-driver reveal">
+    <div class="split-copy">
+      <h2>DRIVE WITH DEEDASH</h2>
+      <p>Looking for high earnings and flexible hours with a supportive local team?</p>
+      <a class="btn btn-primary" href="/driver-portal">Driver Portal</a>
+    </div>
+    <div class="split-media">
+      <img src="/assets/images/driver.jpg" alt="Friendly taxi driver standing by vehicle" />
+    </div>
+  </section>
+
+  <section class="section coverage">
+    <div class="container coverage-grid">
+      <div class="coverage-copy reveal">
+        <h2 class="section-title">SERVING CHESTER AND NEARBY AREAS</h2>
+        <p>
+          We cover Chester city and surrounding locations, including [NEARBY AREAS YOU WANT TO LIST].
+        </p>
+        <p class="coverage-note">Not sure if we cover your pickup? Call us anytime.</p>
+        <a class="btn btn-primary" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+      </div>
+      <div class="coverage-map reveal" aria-hidden="true">
+        <img src="/assets/images/chester-rows.jpg" alt="Chester city landmark" />
+        <div class="map-pin pin-1">Chester City</div>
+        <div class="map-pin pin-2">Airport Runs</div>
+        <div class="map-pin pin-3">Business Travel</div>
+      </div>
     </div>
   </section>
 </SiteLayout>
