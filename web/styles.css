@@ -44,6 +44,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --brand-gold: #fbb316;
   --brand-gold-strong: #e9a000;
@@ -62,8 +78,8 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
   --font-sans: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
-  --font-display: "Drupadi", var(--font-sans);
-  --font-subhead: "Drupadi", var(--font-sans);
+  --font-display: "Poppins", var(--font-sans);
+  --font-subhead: "Poppins", var(--font-sans);
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
