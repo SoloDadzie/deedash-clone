@@ -8,19 +8,13 @@
       name="description"
       content="DeeDash Cabs offers safe, friendly private hire across Chester and nearby areas, from local trips to airport transfers and business travel."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20240215af" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-shell">
-        <a href="./index.html" class="brand" aria-label="DeeDash Cabs home">
-          <img src="./assets/images/logo-primary.png" alt="DeeDash Cabs" />
+        <a href="#" class="brand" aria-label="DeeDash Cabs home">
+          <img src="./assets/images/logo-primary.png?v=20240216b" alt="DeeDash Cabs" />
         </a>
 
         <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
@@ -30,13 +24,13 @@
         </button>
 
         <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-          <a href="./book-a-ride.html">Book a Ride</a>
-          <a href="./our-services.html">Our Services</a>
-          <a href="./business-solutions.html">Business Solutions</a>
-          <a href="./driver-portal.html">Driver Portal</a>
+          <a href="#book">Book a Ride</a>
+          <a href="#services">Our Services</a>
+          <a href="#business">Business Solutions</a>
+          <a href="#drivers">Driver Portal</a>
         </nav>
 
-        <a class="btn btn-primary nav-cta" href="tel:%5BPHONE%20NUMBER%5D">Call: [PHONE NUMBER]</a>
+        <a class="btn btn-primary nav-cta" href="tel:07380201928">Call: 07380 201928</a>
       </div>
     </header>
 
@@ -47,158 +41,290 @@
 
         <div class="container hero-content reveal">
           <p class="eyebrow">Private Hire in Chester &amp; Environs</p>
-          <h1>PREMIUM RIDES. GREAT VALUE. READY WHEN YOU ARE.</h1>
+          <h1 class="hero-title">
+            <span>Premium Rides. Great Value.</span>
+            <span>Ready when you are.</span>
+          </h1>
           <p class="hero-subtitle">
             DeeDash Cabs offers safe, friendly private hire across Chester &mdash; from quick local trips to airport transfers and business travel.
           </p>
 
           <div class="hero-ctas">
-            <a class="btn btn-accent" href="./book-a-ride.html">Request a Ride</a>
-            <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+            <a class="btn btn-accent" href="#book">Request a Ride</a>
+            <a class="btn btn-ghost" href="tel:07380201928">Call to Book: 07380 201928</a>
           </div>
 
           <p class="trust-line">24/7 service &bull; DBS-checked drivers &bull; Card or cash accepted</p>
         </div>
       </section>
 
-      <section class="booking-strip reveal">
-        <div class="container booking-shell">
-          <h2>BOOK IN SECONDS</h2>
-          <form class="booking-form" action="./book-a-ride.html" method="get" novalidate>
-            <label>
-              Pickup Location
-              <input type="text" name="pickup" placeholder="Start typing your address" />
-            </label>
-            <label>
-              Drop-off Location
-              <input type="text" name="dropoff" placeholder="Where are you going?" />
-            </label>
-            <label>
-              Now / Schedule
-              <input type="text" name="time" placeholder="Choose &quot;Now&quot; for ASAP pickup" />
-            </label>
-            <label>
-              Passengers
-              <input type="text" name="passengers" placeholder="Solo travellers to small groups" />
-            </label>
-            <button class="btn btn-primary" type="submit">Request a Ride</button>
-          </form>
-          <p class="booking-meta">Instant confirmation on screen, plus SMS/email.</p>
-          <p class="booking-features">Book now or schedule ahead &bull; Live driver ETA &bull; Driver and vehicle details before pickup</p>
+      <section id="book" class="booking-strip reveal">
+        <div class="container">
+          <div class="booking-shell">
+            <div class="booking-panel">
+              <p class="booking-panel__eyebrow">Instant Bookings</p>
+              <h2>Book In Seconds</h2>
+              <p class="booking-panel__lead">
+                Confirm your ride in moments — perfect for airport runs, business travel, and last-minute city trips.
+              </p>
+
+              <ul class="booking-panel__highlights">
+                <li>Live driver ETA &amp; tracking links for every journey</li>
+                <li>Instant SMS and email confirmations</li>
+                <li>Cashless payments with receipts sent automatically</li>
+              </ul>
+
+              <div class="booking-panel__contact">
+                <div>
+                  <span>Need help?</span>
+                  <strong>07380 201928</strong>
+                </div>
+                <a class="btn btn-outline" href="tel:07380201928">Call Dispatch</a>
+              </div>
+            </div>
+
+            <form class="booking-form" action="#" method="post" novalidate>
+              <div class="booking-form__grid">
+                <label>
+                  <span>Pickup Location</span>
+                  <input type="text" name="pickup" placeholder="Start typing your address" />
+                </label>
+                <label>
+                  <span>Drop-off Location</span>
+                  <input type="text" name="dropoff" placeholder="Where are you going?" />
+                </label>
+                <label>
+                  <span>Now / Schedule</span>
+                  <input type="text" name="time" placeholder="Choose &quot;Now&quot; or enter a date" />
+                </label>
+                <label>
+                  <span>Passengers</span>
+                  <input type="text" name="passengers" placeholder="Solo travellers to small groups" />
+                </label>
+              </div>
+
+              <div class="booking-form__actions">
+                <p>Instant confirmation plus driver + vehicle details before pickup.</p>
+                <button class="btn btn-primary" type="submit">Request a Ride</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
       <section class="section why">
         <div class="container">
-          <h2 class="section-title reveal">WHY CHOOSE DEEDASH CABS?</h2>
+          <h2 class="section-title reveal">Why Choose DeeDash Cabs?</h2>
           <div class="benefit-grid">
             <article class="benefit-card reveal">
-              <div class="icon">PF</div>
-              <h3>PROFESSIONAL &amp; FRIENDLY</h3>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <circle cx="7" cy="8" r="3"></circle>
+                  <circle cx="17" cy="8" r="3"></circle>
+                  <path d="M4 20v-2a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v2H4zm8 0v-2a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v2z"></path>
+                </svg>
+              </div>
+              <h3>Professional &amp; Friendly</h3>
               <p>Polite drivers and a clean, comfortable ride&mdash;every time.</p>
             </article>
             <article class="benefit-card reveal">
-              <div class="icon">SF</div>
-              <h3>SAFETY FIRST</h3>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M12 3 4 7v5c0 5.52 3.84 10.74 8 12 4.16-1.26 8-6.48 8-12V7z"></path>
+                  <path d="m11 13 3-3 1.5 1.5-4.5 4.5-3-3L9 11.5z"></path>
+                </svg>
+              </div>
+              <h3>Safety First</h3>
               <p>DBS checks, ID and right-to-work checks, and trained drivers.</p>
             </article>
             <article class="benefit-card reveal">
-              <div class="icon">GV</div>
-              <h3>GREAT VALUE</h3>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M12 2 9.19 8.26 2.5 9.27l4.9 4.78L5.82 21 12 17.77 18.18 21l-1.58-6.95 4.9-4.78-6.69-1.01z"></path>
+                </svg>
+              </div>
+              <h3>Great Value</h3>
               <p>A premium experience with fair, sensible pricing.</p>
             </article>
             <article class="benefit-card reveal">
-              <div class="icon">24</div>
-              <h3>ALWAYS AVAILABLE</h3>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v6l4 2"></path>
+                </svg>
+              </div>
+              <h3>Always Available</h3>
               <p>24/7 bookings and support when you need it.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section services">
+      <section id="services" class="section services">
         <div class="container">
-          <h2 class="section-title reveal">POPULAR SERVICES</h2>
-          <div class="service-grid">
+          <h2 class="section-title reveal">Popular Services</h2>
+          <div class="service-grid showcase">
             <article class="service-card reveal">
-              <img src="./assets/images/service-airport.jpg" alt="Airport terminal for transfer service" />
-              <div class="service-copy">
-                <h3>AIRPORT TRANSFERS</h3>
+              <div class="service-card__media">
+                <img src="./assets/images/service-airport.jpg?v=20240216b" alt="Executive DeeDash cab ready for airport transfer" />
+              </div>
+              <div class="service-card__body">
+                <h3>Airport Transfers</h3>
                 <p>Direct, stress-free trips to Manchester (MAN), Liverpool (LPL), Birmingham (BHX) and London airports.</p>
-                <a href="./book-a-ride.html" class="btn btn-outline">Request a Ride</a>
+                <a class="btn btn-outline service-card__cta" href="#book">Request a Ride</a>
               </div>
             </article>
 
             <article class="service-card reveal">
-              <img src="./assets/images/service-school.jpg" alt="Road sign indicating school crossing" />
-              <div class="service-copy">
-                <h3>SCHOOL RUNS</h3>
-                <p>Reliable, regular transport with safeguarding-aware drivers.</p>
-                <a href="./book-a-ride.html" class="btn btn-outline">Request a Ride</a>
+              <div class="service-card__media">
+                <img src="./assets/images/service-school.jpg?v=20240216b" alt="School run passengers boarding DeeDash vehicle" />
+              </div>
+              <div class="service-card__body">
+                <h3>School Runs</h3>
+                <p>Reliable, consistent transport with drivers trained in safeguarding&mdash;providing a safe, supportive service you can trust.</p>
+                <a class="btn btn-outline service-card__cta" href="#book">Request a Ride</a>
               </div>
             </article>
 
             <article class="service-card reveal">
-              <img src="./assets/images/service-medical.jpg" alt="Hospital entrance for medical appointments" />
-              <div class="service-copy">
-                <h3>MEDICAL &amp; HOSPITAL TRIPS</h3>
+              <div class="service-card__media">
+                <img src="./assets/images/service-medical.jpg?v=20240216b" alt="Medical passenger being helped towards hospital" />
+              </div>
+              <div class="service-card__body">
+                <h3>Medical &amp; Hospital Trips</h3>
                 <p>Non-emergency journeys to clinics and hospitals with care and professionalism.</p>
-                <a href="./book-a-ride.html" class="btn btn-outline">Request a Ride</a>
+                <a class="btn btn-outline service-card__cta" href="#book">Request a Ride</a>
               </div>
             </article>
 
             <article class="service-card reveal">
-              <img src="./assets/images/service-events.jpg" alt="Wedding car for special events" />
-              <div class="service-copy">
-                <h3>EVENTS &amp; WEDDINGS</h3>
+              <div class="service-card__media">
+                <img src="./assets/images/service-events.jpg?v=20240216b" alt="Wedding party using DeeDash chauffeur service" />
+              </div>
+              <div class="service-card__body">
+                <h3>Events &amp; Weddings</h3>
                 <p>Arrive on time and travel together&mdash;perfect for evenings out and special occasions.</p>
-                <a href="./book-a-ride.html" class="btn btn-outline">Request a Ride</a>
+                <a class="btn btn-outline service-card__cta" href="#book">Request a Ride</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="split split-business reveal">
-        <div class="split-media">
-          <img src="./assets/images/business-travel.jpg" alt="Business passenger with chauffeur service" />
-        </div>
-        <div class="split-copy">
-          <h2>BUSINESS TRAVEL THAT RUNS ON TIME</h2>
-          <p>
-            Need reliable travel for staff, clients, or guests? DeeDash Business Solutions offers priority support and simple booking by web,
-            phone, or email.
-          </p>
-          <a class="btn btn-accent" href="./business-solutions.html">Business Solutions</a>
+      <section id="business" class="business-feature reveal">
+        <div class="business-feature__wrapper">
+          <div class="business-feature__media">
+            <img src="./assets/images/business-travel.jpg?v=20240216b" alt="Executive traveler in yellow cab queue" />
+          </div>
+
+          <div class="business-feature__content">
+            <p class="business-feature__eyebrow">Corporate Travel</p>
+            <h2>Your first choice for traveling anywhere</h2>
+            <p>
+              Need reliable travel for staff, clients, or guests? DeeDash Business Solutions provides priority support, instant confirmations, and concierge-style coordination across Chester and beyond.
+            </p>
+
+            <div class="business-feature__highlight">
+              <div>
+                <h3 class="business-feature__highlight-title">We specialize in premium, high-quality service</h3>
+                <p class="business-feature__highlight-desc">Executive vehicles, trained chauffeurs, and always-on dispatch for your team.</p>
+              </div>
+              <div class="business-feature__highlight-media">
+                <img src="./assets/images/service-events.jpg?v=20240216b" alt="Driver assisting passenger by car" />
+                <button class="business-feature__play" type="button" aria-label="Play overview video">
+                  <span></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="business-feature__contact">
+              <div class="business-feature__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M6.6 2.01a1 1 0 0 1 1.08.33l2.28 2.9a1 1 0 0 1 .07 1.12l-1.3 2.3a.5.5 0 0 0 .02.52 11.4 11.4 0 0 0 4.21 4.2.5.5 0 0 0 .52.02l2.29-1.3a1 1 0 0 1 1.12.07l2.9 2.28a1 1 0 0 1 .33 1.08l-.77 2.64a1.5 1.5 0 0 1-1.44 1.08c-9.17-.24-16.55-7.62-16.79-16.79a1.5 1.5 0 0 1 1.08-1.44z" />
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label">Call us now</p>
+                <a href="tel:07380201928">07380 201928</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="split split-driver reveal">
-        <div class="split-copy">
-          <h2>DRIVE WITH DEEDASH</h2>
-          <p>Looking for high earnings and flexible hours with a supportive local team?</p>
-          <a class="btn btn-primary" href="./driver-portal.html">Driver Portal</a>
-        </div>
-        <div class="split-media">
-          <img src="./assets/images/driver.jpg" alt="Friendly taxi driver standing by vehicle" />
+      <section id="drivers" class="driver-feature reveal">
+        <div class="driver-feature__wrapper">
+          <div class="driver-feature__content">
+            <h2>Professional And Dedicated Online Taxi Services</h2>
+            <p class="driver-feature__lead">
+              Looking for high earnings and flexible hours with a supportive local team?
+            </p>
+            <a class="btn btn-primary driver-feature__cta" href="mailto:bookings@deedash.co.uk?subject=Driver%20Portal">
+              Driver Portal
+            </a>
+          </div>
+
+          <div class="driver-feature__media-block">
+            <div class="driver-feature__media">
+              <img src="./assets/images/driver.jpg?v=20240216b" alt="Professional female chauffeur driving clients" />
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section coverage">
         <div class="container coverage-grid">
-          <div class="coverage-copy reveal">
-            <h2 class="section-title">SERVING CHESTER AND NEARBY AREAS</h2>
-            <p>
-              We cover Chester city and surrounding locations, including [NEARBY AREAS YOU WANT TO LIST].
+          <div class="coverage-card reveal">
+            <p class="coverage-eyebrow">Coverage Map</p>
+            <h2 class="section-title">Serving Chester And Nearby Areas</h2>
+            <p class="coverage-lead">
+              Priority pickups across Chester city centre, Hoole, Handbridge, Ellesmere Port, Wrexham, Deeside, Chester Business Park,
+              and surrounding villages.
             </p>
-            <p class="coverage-note">Not sure if we cover your pickup? Call us anytime.</p>
-            <a class="btn btn-primary" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+
+            <div class="coverage-stats">
+              <div>
+                <span>20+</span>
+                <p>areas covered daily</p>
+              </div>
+              <div>
+                <span>15 min</span>
+                <p>average city pickup</p>
+              </div>
+              <div>
+                <span>24/7</span>
+                <p>airport transfers</p>
+              </div>
+            </div>
+
+            <div class="coverage-tags">
+              <span>Chester City</span>
+              <span>Hoole &amp; Upton</span>
+              <span>Ellesmere Port</span>
+              <span>Wrexham</span>
+              <span>Deeside</span>
+              <span>Business Park</span>
+            </div>
+
+            <div class="coverage-cta">
+              <p>Not sure if we cover your pickup? Call dispatch and we’ll confirm in seconds.</p>
+              <a class="btn btn-primary" href="tel:07380201928">Call to Book: 07380 201928</a>
+            </div>
           </div>
+
           <div class="coverage-map reveal" aria-hidden="true">
-            <img src="./assets/images/chester-rows.jpg" alt="Chester city landmark" />
-            <div class="map-pin pin-1">Chester City</div>
-            <div class="map-pin pin-2">Airport Runs</div>
-            <div class="map-pin pin-3">Business Travel</div>
+            <div class="coverage-map__frame">
+              <img src="./assets/images/chester-rows.jpg?v=20240216b" alt="Chester city landmark" />
+              <div class="map-pin pin-1">
+                <span>Chester City</span>
+              </div>
+              <div class="map-pin pin-2">
+                <span>Airport Runs</span>
+              </div>
+              <div class="map-pin pin-3">
+                <span>Business Travel</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -207,32 +333,32 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <section>
-          <img class="footer-logo" src="./assets/images/logo-primary.png" alt="DeeDash Cabs logo" />
+          <img class="footer-logo" src="./assets/images/logo-primary.png?v=20240216b" alt="DeeDash Cabs logo" />
           <p>DeeDash Cabs &mdash; Chester, UK</p>
           <p>Safe &bull; Professional &bull; Friendly &bull; 24/7</p>
         </section>
 
         <section>
           <h3>Quick Links</h3>
-          <a href="./index.html">Home</a>
-          <a href="./book-a-ride.html">Book a Ride</a>
-          <a href="./our-services.html">Our Services</a>
-          <a href="./business-solutions.html">Business Solutions</a>
-          <a href="./driver-portal.html">Driver Portal</a>
-          <a href="./about-us.html">About Us</a>
-          <a href="./contact-us.html">Contact Us</a>
+          <a href="#">Home</a>
+          <a href="#book">Book a Ride</a>
+          <a href="#services">Our Services</a>
+          <a href="#business">Business Solutions</a>
+          <a href="#drivers">Driver Portal</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
         </section>
 
         <section>
           <h3>Contact &amp; Legal</h3>
-          <p>Phone: [PHONE NUMBER]</p>
-          <p>Email: [EMAIL ADDRESS]</p>
-          <p>WhatsApp: [WHATSAPP NUMBER]</p>
-          <p>Office: [OFFICE/BASE ADDRESS, CHESTER]</p>
+          <p>Phone: 07380 201928</p>
+          <p>Email: bookings@deedash.co.uk</p>
+          <p>WhatsApp: 07380 201928</p>
+          <p>Office: 12 Watergate Street, Chester, CH1 2LA</p>
           <div class="legal-links">
-            <a href="./terms-and-conditions.html">Terms &amp; Conditions</a>
-            <a href="./privacy-policy.html">Privacy Policy</a>
-            <a href="./cookie-policy.html">Cookie Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
           </div>
         </section>
       </div>
