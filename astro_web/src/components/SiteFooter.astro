@@ -12,11 +12,13 @@ import { quickLinks, legalLinks, contactDetails } from '../data/site';
 
     <section>
       <h3>Quick Links</h3>
-      {
-        quickLinks.map((link) => (
-          <a href={link.href}>{link.label}</a>
-        ))
-      }
+      <div class="footer-links__grid">
+        {
+          quickLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </div>
     </section>
 
     <section>

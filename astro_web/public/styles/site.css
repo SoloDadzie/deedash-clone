@@ -1578,27 +1578,25 @@ a {
 }
 
 .site-footer section a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0.5rem 1rem;
-  margin: 0.35rem 0 0.35rem 0;
-  background: rgba(251, 179, 22, 0.15);
-  color: var(--brand-gold);
-  border-radius: var(--radius-md);
-  font-size: clamp(0.85rem, 0.7vw, 0.92rem);
-  font-weight: var(--weight-medium);
+  display: inline-block;
+  color: #fdf2d0;
   text-decoration: none;
-  transition: all 0.2s ease;
-  border: 1px solid rgba(251, 179, 22, 0.3);
+  font-size: clamp(0.85rem, 0.7vw, 0.92rem);
+  font-weight: 500;
+  padding: 0.2rem 0;
+  transition: color 0.2s ease;
 }
 
 .site-footer section a:hover,
 .site-footer section a:focus-visible {
-  background: rgba(251, 179, 22, 0.25);
-  border-color: var(--brand-gold);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(251, 179, 22, 0.2);
+  color: var(--brand-gold);
+  text-decoration: underline;
+}
+
+.footer-links__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem 1.5rem;
 }
 
 .legal-links {
@@ -1782,6 +1780,18 @@ a {
   .benefit-card {
     max-width: 520px;
     margin: 0 auto;
+  }
+
+  .footer-links__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-driver .split-copy {
+    order: 2;
+  }
+
+  .split-driver .split-media {
+    order: 1;
   }
 
   .split-media img {
