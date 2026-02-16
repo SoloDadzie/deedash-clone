@@ -1606,6 +1606,19 @@ a {
   gap: 0.4rem;
 }
 
+.legal-links a {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 0 0.4rem;
+}
+
+.legal-links a + a::before {
+  content: "|";
+  margin-right: 0.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(22px);
