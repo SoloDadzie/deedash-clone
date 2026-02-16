@@ -1578,27 +1578,19 @@ a {
 }
 
 .site-footer section a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0.5rem 1rem;
-  margin: 0.35rem 0 0.35rem 0;
-  background: rgba(251, 179, 22, 0.15);
-  color: var(--brand-gold);
-  border-radius: var(--radius-md);
+  display: inline-block;
+  color: #fdf2d0;
+  text-decoration: none;
   font-size: clamp(0.85rem, 0.7vw, 0.92rem);
   font-weight: var(--weight-medium);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border: 1px solid rgba(251, 179, 22, 0.3);
+  padding: 0.2rem 0;
+  transition: color 0.2s ease;
 }
 
 .site-footer section a:hover,
 .site-footer section a:focus-visible {
-  background: rgba(251, 179, 22, 0.25);
-  border-color: var(--brand-gold);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(251, 179, 22, 0.2);
+  color: var(--brand-gold);
+  text-decoration: underline;
 }
 
 .legal-links {
@@ -1914,11 +1906,6 @@ a {
 
   .coverage-tags span {
     flex: 1 1 100%;
-  }
-
-  .site-footer section a {
-    width: 100%;
-    justify-content: center;
   }
 
   .map-pin {
