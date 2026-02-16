@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
 ---
 
 <SiteLayout
@@ -52,9 +53,9 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         <h2>APPLY THE WAY THAT SUITS YOU</h2>
         <ul class="plain-list">
           <li><strong>Apply online:</strong> [APPLY FORM LINK / EMBED FORM]</li>
-          <li><strong>WhatsApp:</strong> [WHATSAPP NUMBER]</li>
-          <li><strong>Call:</strong> [PHONE NUMBER]</li>
-          <li><strong>Email:</strong> [DRIVER EMAIL PLACEHOLDER]</li>
+          <li><strong>WhatsApp:</strong> {contactDetails.whatsapp}</li>
+          <li><strong>Call:</strong> {contactDetails.phone}</li>
+          <li><strong>Email:</strong> {contactDetails.email}</li>
         </ul>
         <a class="btn btn-primary" href="/contact-us">Apply to Drive</a>
       </article>

@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
 ---
 
 <SiteLayout
@@ -82,10 +83,10 @@ import SiteLayout from '../layouts/SiteLayout.astro';
       <article class="panel reveal cta-band">
         <p class="kicker">Service Area</p>
         <h2>WHERE WE OPERATE</h2>
-        <p>We cover Chester and can also serve nearby areas, including [NEARBY AREAS YOU WANT TO LIST].</p>
+        <p>We cover Chester and can also serve nearby areas, including Hoole, Handbridge, Ellesmere Port, Wrexham, Deeside, and Chester Business Park.</p>
         <div class="inline-actions">
           <a class="btn btn-accent" href="/book-a-ride">Request a Ride</a>
-          <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+          <a class="btn btn-ghost" href={`tel:${contactDetails.phoneTel}`}>Call to Book: {contactDetails.phone}</a>
         </div>
       </article>
     </div>

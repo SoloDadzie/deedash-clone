@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
 ---
 
 <SiteLayout
@@ -55,7 +56,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         <p>Tell us what you need, and we&apos;ll get you started quickly.</p>
         <div class="inline-actions">
           <a class="btn btn-accent" href="/contact-us">Contact Business Team</a>
-          <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call: [PHONE NUMBER]</a>
+          <a class="btn btn-ghost" href={`tel:${contactDetails.phoneTel}`}>Call: {contactDetails.phone}</a>
         </div>
       </article>
     </div>

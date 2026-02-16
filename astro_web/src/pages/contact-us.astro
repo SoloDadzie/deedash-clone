@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
 ---
 
 <SiteLayout
@@ -14,7 +15,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
       <p>Book a ride, ask a question, or get help &mdash; we&apos;re available 24/7.</p>
       <div class="page-hero-cta">
         <a class="btn btn-accent" href="/book-a-ride">Request a Ride</a>
-        <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call Now</a>
+        <a class="btn btn-ghost" href={`tel:${contactDetails.phoneTel}`}>Call Now</a>
       </div>
     </div>
   </section>
@@ -25,20 +26,20 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         <p class="kicker">Bookings &amp; Support</p>
         <h2>WE&apos;RE HERE 24/7</h2>
         <ul class="plain-list">
-          <li><strong>Phone (24/7):</strong> [PHONE NUMBER]</li>
-          <li><strong>Email:</strong> [EMAIL ADDRESS]</li>
-          <li><strong>WhatsApp:</strong> [WHATSAPP NUMBER]</li>
+          <li><strong>Phone (24/7):</strong> {contactDetails.phone}</li>
+          <li><strong>Email:</strong> {contactDetails.email}</li>
+          <li><strong>WhatsApp:</strong> {contactDetails.whatsapp}</li>
         </ul>
         <div class="inline-actions">
           <a class="btn btn-primary" href="/book-a-ride">Request a Ride</a>
-          <a class="btn btn-outline" href="tel:%5BPHONE%20NUMBER%5D">Call Now</a>
+          <a class="btn btn-outline" href={`tel:${contactDetails.phoneTel}`}>Call Now</a>
         </div>
       </article>
 
       <article class="panel reveal">
         <p class="kicker">Office Address</p>
         <h2>DEEDASH CABS</h2>
-        <p>[OFFICE/BASE ADDRESS, CHESTER]</p>
+        <p>{contactDetails.office}</p>
       </article>
     </div>
   </section>
@@ -49,14 +50,14 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         <p class="kicker">Lost Property</p>
         <h3>LEFT SOMETHING IN A VEHICLE?</h3>
         <p>If you left something in a vehicle, contact us as soon as possible with your journey details.</p>
-        <a class="btn btn-outline" href="tel:%5BPHONE%20NUMBER%5D">Call: [PHONE NUMBER]</a>
+        <a class="btn btn-outline" href={`tel:${contactDetails.phoneTel}`}>Call: {contactDetails.phone}</a>
       </article>
 
       <article class="panel reveal">
         <p class="kicker">Feedback</p>
         <h3>HELP US IMPROVE</h3>
         <p>Your feedback helps us improve and serve Chester better.</p>
-        <a class="btn btn-outline" href="mailto:%5BEMAIL%20ADDRESS%5D">Send Feedback: [EMAIL ADDRESS]</a>
+        <a class="btn btn-outline" href={`mailto:${contactDetails.email}`}>Send Feedback: {contactDetails.email}</a>
       </article>
 
       <article class="panel reveal cta-band">
