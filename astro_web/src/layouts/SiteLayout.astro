@@ -19,12 +19,6 @@ const { title, description, currentPath = Astro.url.pathname } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="/styles/site.css" />
   </head>
   <body>

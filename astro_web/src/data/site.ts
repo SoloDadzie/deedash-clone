@@ -27,8 +27,9 @@ export const legalLinks: NavLink[] = [
 ];
 
 export const contactDetails = {
-  phone: '[PHONE NUMBER]',
-  email: '[EMAIL ADDRESS]',
-  whatsapp: '[WHATSAPP NUMBER]',
-  office: '[OFFICE/BASE ADDRESS, CHESTER]'
+  phone: '07380 201928',
+  phoneTel: '07380201928',
+  email: 'bookings@deedash.co.uk',
+  whatsapp: '07380 201928',
+  office: '12 Watergate Street, Chester, CH1 2LA'
 };

@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
 ---
 
 <SiteLayout
@@ -14,7 +15,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
       <p>Request an ASAP pickup or schedule ahead. You&apos;ll get instant confirmation on screen, plus SMS/email.</p>
       <div class="page-hero-cta">
         <a class="btn btn-accent" href="#booking-form">Request a Ride</a>
-        <a class="btn btn-ghost" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+        <a class="btn btn-ghost" href={`tel:${contactDetails.phoneTel}`}>Call to Book: {contactDetails.phone}</a>
       </div>
     </div>
   </section>
@@ -38,7 +39,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
           Fares are based on time and distance (meter-style). If you&apos;d like a rough estimate before you travel, call us,
           and we&apos;ll help.
         </p>
-        <a class="btn btn-primary" href="tel:%5BPHONE%20NUMBER%5D">Call to Book: [PHONE NUMBER]</a>
+        <a class="btn btn-primary" href={`tel:${contactDetails.phoneTel}`}>Call to Book: {contactDetails.phone}</a>
       </article>
     </div>
   </section>
