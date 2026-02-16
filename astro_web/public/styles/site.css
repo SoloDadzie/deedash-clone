@@ -812,20 +812,32 @@ a {
 }
 
 .site-footer section a {
-  display: block;
-  margin: 0.35rem 0;
-  color: #f0f0f0;
+  display: inline-block;
+  color: #fdf2d0;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 0.7vw, 0.92rem);
+  font-weight: 500;
+  padding: 0.2rem 0;
+  transition: color 0.2s ease;
 }
 
 .site-footer section a:hover,
 .site-footer section a:focus-visible {
   color: var(--brand-gold);
+  text-decoration: underline;
+}
+
+.footer-links__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem 1.5rem;
 }
 
 .legal-links {
   margin-top: 0.8rem;
-  display: grid;
-  gap: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .reveal {
@@ -905,6 +917,10 @@ a {
   .coverage-grid,
   .contact-grid,
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links__grid {
     grid-template-columns: 1fr;
   }
 
