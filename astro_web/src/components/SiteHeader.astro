@@ -1,0 +1,46 @@
+---
+import { primaryNavLinks, contactDetails } from '../data/site';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const isCurrent = (href: string): boolean =>
+  currentPath === href || (href !== '/' && currentPath.startsWith(`${href}/`));
+---
+
+<header class="site-header">
+  <div class="container nav-shell">
+    <a href="/" class="brand" aria-label="DeeDash Cabs home">
+      <img src="/assets/images/logo-primary.png" alt="DeeDash Cabs" />
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      {
+        primaryNavLinks.map((link) => (
+          <a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a class="btn btn-primary nav-cta" href={`tel:${contactDetails.phoneTel}`}>
+      Call: {contactDetails.phone}
+    </a>
+  </div>
+</header>

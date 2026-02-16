@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Caravel";
-  src: url("./assets/fonts/Caravel-subset.ttf") format("truetype");
+  src: url("/assets/fonts/Caravel-subset.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Caravel";
-  src: url("./assets/fonts/Caravel-subset.ttf") format("truetype");
+  src: url("/assets/fonts/Caravel-subset.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -16,13 +16,13 @@
 
 @font-face {
   font-family: "Drupadi";
-  src: url("./assets/fonts/Drupadi-Regular-subset.ttf") format("truetype");
+  src: url("/assets/fonts/Drupadi-Regular-subset.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./assets/fonts/Montserrat-Regular-subset.otf") format("opentype");
+  src: url("/assets/fonts/Montserrat-Regular-subset.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./assets/fonts/Montserrat-Medium-subset.otf") format("opentype");
+  src: url("/assets/fonts/Montserrat-Medium-subset.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./assets/fonts/Montserrat-Bold-subset.otf") format("opentype");
+  src: url("/assets/fonts/Montserrat-Bold-subset.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -259,7 +259,7 @@ a {
 }
 
 .hero-media {
-  background-image: url("./assets/images/hero-chester-eastgate.jpg?v=20240216f");
+  background-image: url("/assets/images/hero-chester-eastgate.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
@@ -666,7 +666,7 @@ a {
   overflow: hidden;
   background:
     linear-gradient(110deg, rgba(34, 31, 32, 0.9), rgba(34, 31, 32, 0.78)),
-    url("./assets/images/hero-chester-eastgate.jpg");
+    url("/assets/images/hero-chester-eastgate.jpg");
   background-size: cover;
   background-position: center;
   color: var(--brand-white);
@@ -1582,7 +1582,7 @@ a {
   color: #fdf2d0;
   text-decoration: none;
   font-size: clamp(0.85rem, 0.7vw, 0.92rem);
-  font-weight: var(--weight-medium);
+  font-weight: 500;
   padding: 0.2rem 0;
   transition: color 0.2s ease;
 }
@@ -1604,19 +1604,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-}
-
-.legal-links a {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  padding: 0 0.4rem;
-}
-
-.legal-links a + a::before {
-  content: "|";
-  margin-right: 0.4rem;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .reveal {
@@ -1799,6 +1786,14 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .split-driver .split-copy {
+    order: 2;
+  }
+
+  .split-driver .split-media {
+    order: 1;
+  }
+
   .split-media img {
     max-height: 430px;
   }
@@ -1931,6 +1926,11 @@ a {
     flex: 1 1 100%;
   }
 
+  .site-footer section a {
+    width: 100%;
+    justify-content: center;
+  }
+
   .map-pin {
     font-size: 0.7rem;
   }
@@ -1947,4 +1947,39 @@ a {
     width: 100%;
     justify-content: center;
   }
+}
+
+.htmx-indicator {
+  display: none;
+}
+
+.htmx-request .htmx-indicator,
+.htmx-request.htmx-indicator {
+  display: block;
+}
+
+.htmx-response {
+  margin-top: 0.8rem;
+}
+
+.htmx-response-card {
+  border: 1px solid rgba(34, 31, 32, 0.15);
+  border-radius: var(--radius-md);
+  background: #fff8e7;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.htmx-response-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.htmx-response-card p {
+  margin: 0;
+  color: var(--brand-ink-soft);
+}
+
+.htmx-response-card .btn {
+  margin-top: 0.8rem;
 }

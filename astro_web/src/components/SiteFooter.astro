@@ -1,0 +1,39 @@
+---
+import { quickLinks, legalLinks, contactDetails } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <section>
+      <img class="footer-logo" src="/assets/images/logo-primary.png" alt="DeeDash Cabs logo" />
+      <p>DeeDash Cabs &mdash; Chester, UK</p>
+      <p>Safe &bull; Professional &bull; Friendly &bull; 24/7</p>
+    </section>
+
+    <section>
+      <h3>Quick Links</h3>
+      <div class="footer-links__grid">
+        {
+          quickLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <h3>Contact &amp; Legal</h3>
+      <p>Phone: {contactDetails.phone}</p>
+      <p>Email: {contactDetails.email}</p>
+      <p>WhatsApp: {contactDetails.whatsapp}</p>
+      <p>Office: {contactDetails.office}</p>
+      <div class="legal-links">
+        {
+          legalLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</footer>

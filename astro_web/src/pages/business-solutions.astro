@@ -1,0 +1,64 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
+---
+
+<SiteLayout
+  title="Business Solutions | DeeDash Cabs"
+  description="Business travel made simple for Chester organisations with priority support, flexible booking, and dependable transport."
+  currentPath="/business-solutions"
+>
+  <section class="page-hero">
+    <div class="container page-hero-content reveal">
+      <p class="eyebrow">Business Solutions</p>
+      <h1>BUSINESS TRAVEL MADE SIMPLE</h1>
+      <p>
+        DeeDash helps Chester businesses move staff, clients, and guests with professional service and priority support.
+      </p>
+      <div class="page-hero-cta">
+        <a class="btn btn-accent" href="#contact-business">Contact Business Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <article class="panel reveal">
+        <p class="kicker">Who It&apos;s For</p>
+        <h2>BUILT FOR CHESTER ORGANISATIONS</h2>
+        <ul class="feature-list">
+          <li>Local businesses and SMEs</li>
+          <li>Hotels, venues, and event organisers</li>
+          <li>Professional services</li>
+          <li>Teams needing reliable airport and client travel</li>
+        </ul>
+      </article>
+
+      <article class="panel reveal">
+        <p class="kicker">What You Get</p>
+        <h2>RELIABLE SUPPORT AND COORDINATION</h2>
+        <ul class="feature-list">
+          <li>Priority support and a dedicated contact</li>
+          <li>Flexible booking by web, phone, or email</li>
+          <li>Airport and event coordination for guests and teams</li>
+          <li>Clear journey communication: know what&apos;s booked, when, and for who</li>
+        </ul>
+        <p class="microcopy">If you need something specific, tell us and we&apos;ll tailor a solution.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact-business" class="section-sm">
+    <div class="container">
+      <article class="panel reveal cta-band">
+        <p class="kicker">CTA Block</p>
+        <h2>SET UP BUSINESS TRAVEL WITH DEEDASH</h2>
+        <p>Tell us what you need, and we&apos;ll get you started quickly.</p>
+        <div class="inline-actions">
+          <a class="btn btn-accent" href="/contact-us">Contact Business Team</a>
+          <a class="btn btn-ghost" href={`tel:${contactDetails.phoneTel}`}>Call: {contactDetails.phone}</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</SiteLayout>

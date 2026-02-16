@@ -1,0 +1,94 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { contactDetails } from '../data/site';
+---
+
+<SiteLayout
+  title="Our Services | DeeDash Cabs"
+  description="Explore DeeDash taxi services in Chester including local trips, airport transfers, school runs, medical transport, and events."
+  currentPath="/our-services"
+>
+  <section class="page-hero">
+    <div class="container page-hero-content reveal">
+      <p class="eyebrow">Our Services</p>
+      <h1>TAXI SERVICES BUILT AROUND CHESTER</h1>
+      <p>
+        Whether you&apos;re commuting, travelling, or planning an event, DeeDash Cabs offers a safer, friendlier way to get there.
+      </p>
+      <div class="page-hero-cta">
+        <a class="btn btn-accent" href="/book-a-ride">Request a Ride</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal">CORE SERVICES</h2>
+      <div class="grid-2">
+        <article class="panel reveal">
+          <p class="kicker">Local Trips</p>
+          <h3>QUICK LOCAL JOURNEYS</h3>
+          <p>
+            From Chester city centre to surrounding neighbourhoods, we&apos;re ready 24/7. Ideal for shopping trips, nights out,
+            station runs, and everyday travel.
+          </p>
+          <a class="btn btn-outline" href="/book-a-ride">Request a Ride</a>
+        </article>
+
+        <article class="panel reveal">
+          <p class="kicker">Airport Transfers</p>
+          <h3>AIRPORT TRANSFERS</h3>
+          <p>
+            Reliable pickups and drop-offs to major airports, with easy pre-booking for early mornings and late arrivals.
+            Serving MAN, LPL, BHX and London airports.
+          </p>
+          <a class="btn btn-outline" href="/book-a-ride">Request a Ride</a>
+        </article>
+
+        <article class="panel reveal">
+          <p class="kicker">School Runs</p>
+          <h3>SCHOOL RUNS (ONE-OFF OR REGULAR)</h3>
+          <p>Consistent, dependable transport with drivers trained in safeguarding and customer care.</p>
+          <a class="btn btn-outline" href="/book-a-ride">Request a Ride</a>
+        </article>
+
+        <article class="panel reveal">
+          <p class="kicker">Medical &amp; Hospital Trips</p>
+          <h3>NON-EMERGENCY TRANSPORT</h3>
+          <p>Professional, respectful journeys to hospitals, clinics, and appointments.</p>
+          <a class="btn btn-outline" href="/book-a-ride">Request a Ride</a>
+        </article>
+
+        <article class="panel reveal">
+          <p class="kicker">Events &amp; Weddings</p>
+          <h3>TRAVEL IN COMFORT</h3>
+          <p>Plan travel for guests, groups, and special occasions. Arrive on time and travel in comfort.</p>
+          <a class="btn btn-outline" href="/book-a-ride">Request a Ride</a>
+        </article>
+
+        <article class="panel reveal">
+          <p class="kicker">Fleet</p>
+          <h3>MODERN VEHICLES FOR COMFORT AND SPACE</h3>
+          <p>
+            We operate modern, comfortable saloons and MPVs, ideal for solo travellers to small groups. Tell us how many are
+            travelling and how much luggage you have and we&apos;ll send the right vehicle.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <article class="panel reveal cta-band">
+        <p class="kicker">Service Area</p>
+        <h2>WHERE WE OPERATE</h2>
+        <p>We cover Chester and can also serve nearby areas, including Hoole, Handbridge, Ellesmere Port, Wrexham, Deeside, and Chester Business Park.</p>
+        <div class="inline-actions">
+          <a class="btn btn-accent" href="/book-a-ride">Request a Ride</a>
+          <a class="btn btn-ghost" href={`tel:${contactDetails.phoneTel}`}>Call to Book: {contactDetails.phone}</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</SiteLayout>
