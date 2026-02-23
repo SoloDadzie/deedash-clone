@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "deedash",
+  "name": "deedash-clone",
   "compatibility_date": "2026-02-23",
   "assets": {
     "directory": "./dist"
