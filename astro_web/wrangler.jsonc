@@ -1,8 +1,8 @@
 {
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "deedash",
-  "type": "javascript",
   "compatibility_date": "2026-02-23",
-  "pages": {
-    "build_output_directory": "dist"
+  "assets": {
+    "directory": "./dist"
   }
 }
